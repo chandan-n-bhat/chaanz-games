@@ -14,7 +14,6 @@ Faster you guess greater your score!
 <hr>
 
 # 2. The-Pig-Game: A Fun Game purely built using Javascript (DOM manipulation and Event Handling).
--------------------------------------------------------------------------------------------------------------------------------------------
 <h2><strong>Pig Game Rules</strong></h2>
 
 Pig is a simple dice game which in its basic form is playable with just a single die. You win by being the first player to score 100 or more points.
