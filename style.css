@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    height: inherit;
+}
+
+.navbar {
+    height: 70px;
+    margin-bottom: 0px;
+    font-family: 'Audiowide', cursive;
+    font-weight: 900;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #666666;
+    font: 1.5em;
+}
+
+#brand {
+    color: #000;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #000000;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #8a8584;
+}
+
+.game-dropdown button {
+    margin-top: 14px;
+}
+
+
+/* To center contents of navbar */
+
+li>a,
+.navbar-brand {
+    margin-top: 8px;
+}
