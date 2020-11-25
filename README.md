@@ -11,6 +11,8 @@ To make it easier with each guess I will be telling you if the number u guessed 
 Faster you guess greater your score!
 <h3><strong> Try the game: https://chaanz-games.netlify.app/game1/ </strong></h3>
 
+<img src="https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/game1.JPG"/>
+
 <hr>
 
 # 2. The-Pig-Game: A Fun Game purely built using Javascript (DOM manipulation and Event Handling).
@@ -32,3 +34,5 @@ Play passes from player to player until a winner is determined.
 The first player to accumulate 100 or more points wins the game.
 
 <h3><strong> Try the game: https://chaanz-games.netlify.app/game2/ </strong></h3>
+
+<img src="https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/game2.JPG"/>
