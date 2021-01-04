@@ -1,6 +1,7 @@
 # Chaanz Games
 A bunch of fun games developed using Javascript, HTML, and CSS.
 
+<h3>https://chaanz-games.netlify.app/</h3>
 <img src='https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/static/home-1.png'>
 <!--<img src='https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/static/home-2.png'>-->
 <br/>
