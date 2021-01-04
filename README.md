@@ -1,6 +1,10 @@
 # Chaanz Games
 A bunch of fun games developed using Javascript, HTML, and CSS.
 
+<img src='https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/static/home-1.png'>
+<!--<img src='https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/static/home-2.png'>-->
+<br/>
+<img src='https://raw.githubusercontent.com/chandan-n-bhat/chaanz-games/main/static/home-3.png'>
 
 # 1. Guess My Number:
 <h2><strong>Game Rules</strong></h2>
