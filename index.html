@@ -1,72 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="" />
-
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Courgette&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
     <title>Chaanz Games</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="index.css"></link>
 
-    <style>
-        html {
-            height: 100%;
-        }
-        
-        body {
-            background: url("bg.png");
-            /* background-position: center; */
-            /* background-repeat: no-repeat; */
-            background-size: cover;
-            /* height:100%; */
-        }
-    </style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-                <a class="navbar-brand" id="brand" href=""><strong>Chaanz Games</strong></a>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="./index.html" class="w3-bar-item w3-button w3-wide" style="font-weight: 900;font-size: 15px;">Chaanz Games</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="" class="w3-bar-item w3-button">About</a>
+                <a href="" class="w3-bar-item w3-button"><i class="fa fa-line-chart" aria-hidden="true"></i> Statistics</a>
+                <a href="" class="w3-bar-item w3-button"><i class="fa fa-briefcase" aria-hidden="true"></i> Our Work</a>
             </div>
-
-            <div class="collapse navbar-collapse" id="bs-nav-demo" style="text-align: center;background: #f8f8f8;">
-                <ul class="nav navbar-nav">
-                    <li><a href="">Rules</a></li>
-                    <!-- <li><a href="">Games <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a></li> -->
-                    <li>
-                        <div class="dropdown game-dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Games
-						<span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li role="presentation"><a role="menuitem" href="./game1/index.html">Guess My Number</a></li>
-                                <li role="presentation"><a role="menuitem" href="/game2/index.html">Pig Game</a></li>
-                                <li role="presentation" class="divider"></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                </ul>
-
-            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()"><i class="fa fa-bars"></i></a>
         </div>
-    </nav>
-    <!-- <script src="script.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+    </div>
 
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display: none" id="mySidebar">
+		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+		<a href="" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+		<a href="" onclick="w3_close()" class="w3-bar-item w3-button">Statistics</a>
+		<a href="" onclick="w3_close()" class="w3-bar-item w3-button">Our Work</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-left w3-text-white" style="padding: 48px">
+        <span class="w3-jumbo w3-hide-small">Start something that matters</span><br />
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br/>
+        <p class="type"></p>
+        <p><a href="./game2/index.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Try our game</a></p>
+      </div>
+      <!-- <div
+        class="w3-display-bottomleft w3-text-grey w3-large"
+        style="padding: 24px 48px"
+      >
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div> -->
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding: 32px 16px" id="about">
+		<h3 class="w3-center">ABOUT US</h3>
+		<p class="w3-center w3-large">What we are know for</p>
+		<div class="w3-row-padding w3-center usp" style="margin: 32px 10%">
+			<div class="w3-half usp-in" style="padding-top: 20px;">
+				<i class="fa fa-gamepad w3-margin-bottom w3-jumbo w3-center"></i>
+				<p class="w3-large bold">Fun Games</p>
+				<p>We aim to bring simple fun games at your fingertips!</p>
+			</div>
+			<div class="w3-half usp-in" style="padding-top: 20px;">
+				<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+				<p class="w3-large bold">Customer Satisfaction</p>
+				<p>We aim to achieve a smooth and friendly user experience to every user who visits our website.</p>
+			</div>
+		</div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-32">
+		<h3 class="w3-center">STATISTICS</h3>
+    	<div class="w3-half">
+			<span class="w3-xxlarge">2</span>
+			<br/>Games
+		</div>
+		<div class="w3-half">
+			<span class="w3-xxlarge">20+</span>
+			<br/>Happy Users
+		</div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="w3-container" style="padding: 32px 16px" id="work">
+		<h3 class="w3-center">OUR WORK</h3>
+		<p class="w3-center w3-large">What we've done for people so far!</p>
+
+		<div class="w3-row-padding" style="margin-top: 32px">
+			<div class="w3-col l6 m12">
+				<img src="./game1.JPG" style="width: 100%;" onclick="onClick(this)" class="w3-hover-opacity usp" alt="The Guess Game"/>
+				<a href="game1/index.html"><p class='game-name'>The Guess Game  <i class="fa fa-arrow-right" aria-hidden="true"></i></p></a>
+			</div>
+			<div class="w3-col l6 m12">
+				<img src="./game2.JPG" style="width: 100%;" onclick="onClick(this)" class="w3-hover-opacity usp" alt="The Pig Game"/>
+				<a href="game2/index.html"><p class='game-name'>The Pig Game  <i class="fa fa-arrow-right" aria-hidden="true"></i></p></a>
+			</div>
+		</div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+		<span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">X</span>
+		<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+			<img id="img01" class="w3-image"/>
+			<p id="caption" class="w3-opacity w3-large"></p>
+		</div>
+	</div>
+	
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-32">
+		<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up"></i></a>
+		<p>Made with <span style="color: red;font-size:x-large;"> &hearts; </span> in India</p>
+
+		<div class="w3-xlarge w3-section">
+			<i class="fa fa-facebook-official w3-hover-opacity space"></i>
+			<i class="fa fa-instagram w3-hover-opacity space"></i>
+			<i class="fa fa-twitter w3-hover-opacity space"></i>
+			<i class="fa fa-linkedin w3-hover-opacity space"></i>
+		</div>
+    </footer>
+
+    <script>
+
+		const content = 'All work and no play makes Jack a dull boy.';
+		var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
+
+
+		$(ele).hide().appendTo('.type').each(function (i) {
+			$(this).delay(100 * i).css({
+				display: 'inline',
+				opacity: 0
+			}).animate({
+				opacity: 1
+			}, 100);
+		});
+
+		// var cursor = true;
+        // var speed = 250;
+        // setInterval(() => {
+        //   if(cursor) {
+        //     document.getElementById('cursor').style.opacity = 0;
+        //     cursor = false;
+        //   }else {
+        //     document.getElementById('cursor').style.opacity = 1;
+        //     cursor = true;
+        //   }
+        // }, speed);
+
+		// Modal Image Gallery
+		function onClick(element) {
+			document.getElementById("img01").src = element.src;
+			document.getElementById("modal01").style.display = "block";
+			var captionText = document.getElementById("caption");
+			captionText.innerHTML = element.alt;
+		}
+
+		// Toggle between showing and hiding the sidebar when clicking the menu icon
+		var mySidebar = document.getElementById("mySidebar");
+
+		function w3_open() {
+			if (mySidebar.style.display === "block") {
+			mySidebar.style.display = "none";
+			} else {
+			mySidebar.style.display = "block";
+			}
+		}
+
+		// Close the sidebar with the close button
+		function w3_close() {
+			mySidebar.style.display = "none";
+		}
+    </script>
+  </body>
 </html>
