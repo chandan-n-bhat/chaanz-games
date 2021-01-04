@@ -1,7 +1,19 @@
 'use strict';
 
-swal("Non-Responsive Webpage", "Hello User, Currently website is not responsive. Thus it is recommended not to play the game from your mobile for better experience!.", "warning");
-swal("Game Rules", "A player rolls a dice and scores as many points as the total shown on the dice provided that the dice doesn’t roll a 1. The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn by holding the accumulated score which adds up to the players score. If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the dice to the next player. Play passes from player to player until a winner is determined. The first player to accumulate 100 or more points wins the game.", "info");
+const start = () => {
+    myInfo();
+    initializeGame();
+}
+
+const myInfo = function() {
+    swal("Non-Responsive Webpage", "Hello User, Currently website is not responsive. Thus it is recommended not to play the game from your mobile for better experience!.", "warning");
+    setTimeout(gameRules,10000);
+}
+
+const gameRules = () => {
+    swal("Game Rules", "A player rolls a dice and scores as many points as the total shown on the dice provided that the dice doesn’t roll a 1. The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn by holding the accumulated score which adds up to the players score. If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the dice to the next player. Play passes from player to player until a winner is determined. The first player to accumulate 100 or more points wins the game.", "info");
+}
+
 
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
@@ -47,6 +59,9 @@ const updateDOM = function(domEle, message) {
 }
 
 const initializeGame = function() {
+
+    // Show game Rules
+    // swal("Game Rules", "A player rolls a dice and scores as many points as the total shown on the dice provided that the dice doesn’t roll a 1. The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn by holding the accumulated score which adds up to the players score. If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the dice to the next player. Play passes from player to player until a winner is determined. The first player to accumulate 100 or more points wins the game.", "info");
 
     // Initialize state variables
     scores = Array(0, 0);
